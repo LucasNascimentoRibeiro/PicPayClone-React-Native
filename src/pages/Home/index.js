@@ -1,23 +1,39 @@
 import React from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { MaterialCommunityIcons, AntDesign } from '@expo/vector-icons';
 
-// import { Container } from './styles';
+import { Wrapper, Container, Header, BalanceContainer, BalanceTitle, Balance } from './styles';
+
+import Suggestions from '../../Components/Suggestions';
+import Activities from '../../Components/Activities';
+import Tips from '../../Components/Tips';
+import Banner from '../../Components/Banner';
 
 const Home = () => {
   return  (
-    <View style={styles.container}>
-        <Text>Hooooomaaaa 👽  </Text>
-    </View>
+    
+      <Wrapper>
+        <Container>
+          <Header>
+          <MaterialCommunityIcons name='qrcode-scan' size={30} color='#10c86e'/>
+
+          <BalanceContainer>
+            <BalanceTitle>Meu Saldo</BalanceTitle>
+            <Balance>R$ 00,00</Balance>
+          </BalanceContainer>
+
+          <AntDesign name='gift' size={30} color='#10c86e'/>
+          <MaterialCommunityIcons name="percent-outline" size={30} color="#10c86e" />
+          </Header>
+
+          <Suggestions/>
+          <Activities/>
+          <Tips/>
+          <Banner/>
+          
+        </Container>
+      </Wrapper>
+    
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
-  }
-  
-});
 
 export default Home;
