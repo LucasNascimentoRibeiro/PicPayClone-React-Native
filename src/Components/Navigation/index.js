@@ -37,6 +37,7 @@ const icons = {
 const Navigation = () => {
   return (
       <Tab.Navigator
+        initialRouteName='Wallet'
         screenOptions={({ route, navigation }) => ({
           tabBarIcon: ({ color, size, focused }) => {
 
@@ -80,7 +81,7 @@ const Navigation = () => {
           activeTintColor: '#fff',
           inactiveTintColor: '#fff8',
           tabStyle: {
-            backgroundColor: '#131418',
+            backgroundColor: '#1e222b',
             borderTopColor: 'rgba(255,255,255,0.2)'
           }
         }}
@@ -89,7 +90,7 @@ const Navigation = () => {
             name='Home' 
             component={Home} 
             options={{
-                title: 'Inicio'
+                title: 'Inicio',
             }}
            />
           <Tab.Screen 
