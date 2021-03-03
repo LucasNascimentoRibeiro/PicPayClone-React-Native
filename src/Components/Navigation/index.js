@@ -1,10 +1,13 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { AntDesign, Ionicons } from '@expo/vector-icons';
-import { View } from 'react-native';
+import { AntDesign, Ionicons, MaterialIcons } from '@expo/vector-icons';
 
 import Home from '../../pages/Home';
 import Wallet from '../../pages/Wallet';
+import Notifications from '../../pages/Notifications';
+import Store from '../../pages/Store';
+
+
 import PayScreen from '../../pages/PayScreen';
 import PayButton from './../PayButton';
 
@@ -28,16 +31,16 @@ const icons = {
     lib: Ionicons,
     name: 'ios-notifications-outline',
   },
-  Settings: {
-    lib: Ionicons,
-    name: 'settings-outline',
+  Store: {
+    lib: MaterialIcons,
+    name: 'shopping-bag',
   },
 }
 
 const Navigation = () => {
   return (
       <Tab.Navigator
-        initialRouteName='Wallet'
+        initialRouteName='Home'
         screenOptions={({ route, navigation }) => ({
           tabBarIcon: ({ color, size, focused }) => {
 
@@ -109,16 +112,16 @@ const Navigation = () => {
           />
           <Tab.Screen 
             name='Notifications' 
-            component={Wallet} 
+            component={Notifications} 
             options={{
                 title: 'Notificações'
             }}
           />
           <Tab.Screen 
-            name='Settings' 
-            component={Wallet} 
+            name='Store' 
+            component={Store} 
             options={{
-                title: 'Ajustes'
+                title: 'Loja'
             }}
           />
       </Tab.Navigator>
