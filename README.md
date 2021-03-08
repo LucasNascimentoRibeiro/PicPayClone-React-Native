@@ -21,3 +21,4 @@ expo start
 <li>React Native</li>
 <li>React Navigation</li>
 <li>Expo</li>
+<li>Linear Gradient</li>
